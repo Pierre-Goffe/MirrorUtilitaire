@@ -1,31 +1,33 @@
 # Sharlio Linux Mirror Utility
 
+
+
 ## 📌 Introduction
 
-Cet utilitaire WSL permet de récupérer automatiquement plusieurs distributions Linux depuis le miroir **Sharlio**.  
-Il fournit une **interface graphique Python (PyQt5)** pour sélectionner les distributions et lancer leur téléchargement via **rsync** ou **debmirror**.
+Cet utilitaire permet de créer et mettre à jour automatiquement des miroirs locaux de distributions Linux depuis la source **Sharlio**.
 
-Distributions supportées :
+Conçu spécifiquement pour **WSL (Windows Subsystem for Linux)**, il offre une **interface graphique (GUI) en Python/PyQt5** pour sélectionner les distributions et piloter les outils de synchronisation sous-jacents (**rsync** et **debmirror**) sans gérer de commandes complexes.
 
-- **Proxmox**
-- **Debian**
-- **AlmaLinux**
-- **RockyLinux**
-
-L’objectif est de simplifier le téléchargement de miroir en évitant les commandes manuelles pour l'utilisateur.
+### Distributions supportées :
+* ✅ **Proxmox**
+* ✅ **Debian**
+* ✅ **AlmaLinux**
+* ✅ **RockyLinux**
 
 ---
 
-## 🏗️ Architecture générale
-SharlioUtilsRepo/
-├── app.py               # Application principale (PyQt5)
-├── widgets.py           # Widgets PyQt5
-├── mirror_util.py       # Fonctions utilitaires (rsync, parsing HTML, etc.)
-├── SharlioLogo.ico
-└── README.md
-├── apt_packages.txt         # Dépendances APT pour WSL Debian
-└── pip_packages.txt         # Dépendances Python (PyPI)
+## Architecture du projet
 
+```text
+SharlioUtilsRepo/
+├── app.py               # Point d'entrée de l'interface (PyQt5)
+├── widgets.py           # Composants graphiques
+├── mirror_util.py       # Moteur de synchro (rsync, parsing HTML)
+├── SharlioLogo.ico      # Icône de l'application
+├── apt_packages.txt     # Liste des dépendances système (Debian/Ubuntu)
+├── pip_packages.txt     # Liste des dépendances Python
+└── README.md
+```
 
 ### 🔎 Note
 
