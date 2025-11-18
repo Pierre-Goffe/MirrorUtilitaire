@@ -1,0 +1,5 @@
+# Ignorer les fichiers systèmes Windows/Mac
+.DS_Store
+
+# Ignorer les dossiers de configuration ou dépendances (selon votre langage)
+__pycache__/
